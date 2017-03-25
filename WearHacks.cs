@@ -84,6 +84,7 @@ namespace AssemblyCSharp
                 for (int i = 0; i < size; i++)
                 {
                     tasks[i].markDone();
+		    imcompleteTasks[i] = tasks[i];
                 }
                 return true;
             }
@@ -92,6 +93,7 @@ namespace AssemblyCSharp
                 for (int x = 0; x < size; x++)
                 {
                     tasks[x].markUndone();
+		    completeTasks[x] = tasks[x];
                 }
                 return true;
             }
