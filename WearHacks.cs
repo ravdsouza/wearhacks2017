@@ -22,20 +22,17 @@ namespace AssemblyCSharp
             ~Task() {
                  // class destructor  
             }
+            public string getName() {
+                return name;
+            }
 			public void changeName(string newName) {
 				name = newName;
 			}
 			public void changeDescription(string newDescription) {
 				description = newDescription;
 			}
-			public bool togglePriority() {
-				if (isHighPriority)
-					isHighPriority = false;
-				else 
-					isHighPriority = true;
-				return true;
-			}
-			public bool deleteTask() {
+            public bool setPriority(bool isHigh) {
+				isHighPriority = isHigh;
 				return true;
 			}
 			public bool markDone() {
@@ -45,6 +42,9 @@ namespace AssemblyCSharp
             public bool markUndone() {
                 isDone = false;
                 return true;
+            }
+            public bool checkDone() { 
+                return isDone;
             }
 		}
 
@@ -84,7 +84,7 @@ namespace AssemblyCSharp
                 for (int i = 0; i < size; i++)
                 {
                     tasks[i].markDone();
-		    imcompleteTasks[i] = tasks[i];
+                    imcompleteTasks[i] = tasks[i];
                 }
                 return true;
             }
@@ -93,7 +93,50 @@ namespace AssemblyCSharp
                 for (int x = 0; x < size; x++)
                 {
                     tasks[x].markUndone();
-		    completeTasks[x] = tasks[x];
+                    completeTasks[x] = tasks[x];
+                }
+                return true;
+            }
+            public int numCompleted() {
+                int counter = 0;
+                for (int i = 0; i < size; i++)
+                {
+                    if (tasks[i].checkDone())
+                        counter++;
+                    return counter;
+                }
+                return 0;
+            }
+            public int numIncomplete() {
+                return (size - numCompleted());
+            }
+            public bool addTask(string tName, string tDes, bool highPri) {
+                if (size >= cap)
+                    return false;
+                tasks[size].changeDescription(tDes);
+                tasks[size].changeName(tName);
+                tasks[size].setPriority(highPri);
+                imcompleteTasks[numIncomplete()] = tasks[size];
+                size++;
+                return true;
+            }
+            public bool deleteTask(string name1) {
+                if (size == 0) return false;
+                int index = 0;
+                for (int w = 0; w < size; w++)
+                {
+                    if (tasks[w].getName().Equals(name1))
+                        index = w;
+                }
+                if (index == (size - 1))
+                    size--;
+                if (index < size - 1)
+                {
+                    for (int q = 0; q < size-1; q++)
+                    {
+                        tasks[index] = tasks[index + 1];
+                        size--;
+                    }
                 }
                 return true;
             }
@@ -102,8 +145,3 @@ namespace AssemblyCSharp
 
 	}
 }
-
-
-
-
-
