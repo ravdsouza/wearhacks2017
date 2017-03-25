@@ -1,0 +1,194 @@
+<!-- landing page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Beginning of head -->
+<head>
+	<meta charset="utf.8">
+	<meta name= "description" content= "landing page">
+
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> 
+
+	<!--Change font-->
+		<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+
+	<!-- CSS Style Elements -->
+		<style> 
+			body{
+				background-color:white;
+				font-family: 'Khula', sans-serif;
+			}
+
+			.navbar-default{
+	 			 background:white;
+				 border-color:transparent;
+				 background-image:none;
+	 			 box-shadow:none;
+	 			 font-size:24px;
+	 			 position:fixed;
+	 			 width:100%;
+	 			 font-color:black;
+	 			 border-top: 5px white;
+			}
+
+			.navbar-toggle{
+				background-color:white;
+				border:0;`
+				color:black;
+				transition:300ms, ease-in-out;
+			}
+
+			.jumbotron {
+				 background-image:url('IMG_4968.JPG'); 
+				 width:100%;
+				 height:100%;
+				 background-size:cover;
+				 overflow:hidden;
+				 padding-top:200px;
+				 border-top: thick double;
+				 height: 100vh;
+				 padding-left:100px;
+			}
+
+			.row {
+				font-size:20px;
+				padding-left:17px;
+				padding-bottom:100px;
+			}
+
+			img:hover {
+				opacity:0.5;
+				cursor:pointer;
+			}
+
+		</style> <!--End of CSS Style Elements -->
+
+</head> <!-- End of head -->
+
+<!-- Beginning of body -->
+<body>
+	<!--Navbar-->
+		<nav class="navbar navbar-inverse navbar-sticky-top navbar-default" id="my-navbar">
+			<div class= "container.navbar-default">
+
+				<div class="navbar-header">
+				<!-- Collapsable navbar when on mobile --> 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"> 
+						<span class= "icon-bar"> </span>
+						<span class= "icon-bar"> </span>
+						<span class= "icon-bar"> </span>
+
+					</button>
+
+					<a href="" class="navbar-brand"> </a>
+				</div>
+
+				<div class= "collapse navbar-collapse" id="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href= '#'> Home </a>
+						<li><a href= "#inspiration" class="smoothscroll"> Inspiration </a>
+						<li><a href= "#features"> Features </a>
+						<li><a href= "#connect"> Connect </a>
+
+					</ul>
+				 </div>
+
+			</div> <!--End container-->
+
+		</nav> <!--End navbar -->
+
+
+	<!--jumbotron -->
+	<div class="jumbotron text-left" >
+
+		<h1 class= "display-3"> Meet NART, </h1>
+		<p class="lead"> She wants to help you reach your goals, one movement at a time.  </p>
+
+
+	</div> <!--end jumbotron-->
+
+
+	<!-- inspiration  -->
+	<div class= "container">
+
+		<section>
+			<div class= "page-header" id="inspiration">
+				<h2> Inspiration </h2>
+			</div>
+
+			<div class="row">
+
+				<!-- Text -->
+				<p style="padding-bottom:20px"> So, who are we? </p>
+
+				<p> >> Our names: Nicole, Adrianna, Raveena, Tracy </p>
+				<p> >> First year Mechatronics Engineering students at the University of Waterloo </p>
+				<p> >> Current goal: add some new tools to our toolbox and have lots of fun </p>
+				<p style="padding-bottom:20px"> >> Favourite pattern: plaid </p>
+
+				<p> >> Tools in our toolbox: Unity, C#, C++, creativity </p>
+				<p> >> Hardware: Myo, Google Cardboard </p>
+				<p style="padding-bottom:20px"> >> What NART does: it's your VRPA (virtual reality personal assistant) </p>
+				<!-- End of text -->
+
+			</div>
+
+		</section>
+
+	</div> <!-- End of inspiration -->
+
+	<!-- Features -->
+	<div class= "container">
+
+		<section>
+			<div class= "page-header" id="features">
+				<h2> Features </h2>
+			</div>
+
+			<div class="row">
+
+			</div>
+
+		</section>
+
+	</div> <!-- End of projects -->
+
+
+	<!-- CONNECT-->
+	<div class= "container">
+
+		<section>
+			<div class= "page-header" id="connect">
+				<h2> Connect </h2>
+			</div>
+
+			<div class="row">
+
+				<!-- github -->
+				<figure> 
+				 	<img src="github.png" alt="2" width="280" float:left height="280" class="nothing" onClick="location='https://github.com/tracywhchen/wearhacks2017'" >
+
+ 				</figure> <!-- github end -->
+
+			</div>
+
+		</section>
+
+	</div> <!-- End of connect -->
+ 
+	<script src= "https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Smooth scrolling --> 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="smoothscroll.js"></script>
+
+</body>
+</html>
