@@ -1,24 +1,5 @@
-# wearhacks2017
-To-do (in order of increasing difficulty):
+WearHacks 2017
 
--get Unity working
+A virtual reality personal assistant that combines the usage of the Myo gesture controller and the Utopia 360 VR headset. NART allows the user to control the VR set by doing hand gestures such as left/right/up/down/select etc. Users can access their calendar, to-do list, health information and more. We also made a website (with a link to a YouTube video) to display NART and its features.
 
--display a rectangle with text on it in unity
-
--Display someone's Google calendar (NICE TO HAVE)/to-do list in a 3D space
-
--use google calendar API to display events on someone's calendar on a computer in C#
-  
--Enable interaction with the calendar in the 3D space
-
-
-Wearhacks 2017 © Raveena D'Souza, Tracy Chen, Nicole Rosario, Adrianna Ascalon
-=======
-Code for our project made at Wearhacks 2017
-
-To-Do for Myo:
--Swipe up/down (parse up and down list)
--Swipe left/right (switch between things)
--Grab(select)
--Grab and throw
-
+2017 © Raveena D'Souza, Tracy Chen, Nicole Rosario, Adrianna Ascalon
